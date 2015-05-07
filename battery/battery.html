@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+		
+		<br>
+		
+		<div class="container">		
+		<form class="row">
+			<div class="input-field col s12">
+				<select>
+					<option value="e-e91">Energizer E91 (AA-Alkaline)</option>
+					<option value="e-e92">Energizer E92 (AAA-Alkaline)</option>
+					<option value="e-522">Energizer 522 (9v-Alkaline)</option>
+					<option value="e-l91">Energizer L91 Ultimate Lithium (AA)</option>
+					<option value="e-l92">Energizer L92 Ultimate Lithium (AAA)</option>
+					<option value="e-la522">Energizer LA522 Advanced Lithium (9v)</option>
+					<option value="penn-gc2-110">Penn GC2-110 (6v, car)</option>
+					<option value="trojan-t-145">Trojan T-145 (6v, car)</option>
+					<option value="exide-34xcd">Exide 34XCD (12v, car)</option>
+					<option value="optima-d31t">Optima D31T (12v, car)</option>
+					<option value="odyssey-pc2150">Odyssey PC2150 (12v, car)</option>
+					<option value="trojan-j-150">Trojan J-150 (12v, car)</option>
+					<option value="other">Custom</option>
+				</select>
+				<label>Battery Type</label>
+			</div>
+		
+			<div class="col s6">
+				<h5 class="light center">Rated Discharge Time (hours)</h5>
+				<p class="range-field">
+					<input type="range" id="H" min="5" max="30" step="1" value="20" />
+				</p>
+			</div>
+			
+			<div class="col s6">
+				<h5 class="light center">Peukert's Constant</h5>
+				<p class="range-field">
+					<input type="range" id="k" min="1" max="1.5" step="0.01" value="1.25" />
+				</p>
+			</div>
+			
+			<div class="col s12">
+				<h5 class="light center">Rated Capacity (Ah)</h5>
+				<p class="range-field">
+					<input type="range" id="C" min="0.1" max="250" step="0.1" value="7" />
+				</p>
+			</div>
+		</form>
+		
+		<div id="graph" style="min-width: 310px; width: 90%; height: 400px; margin: 0 auto"></div>
+		<div id="math">
+		</div>
+		
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="dark-unica.js"></script>
+		<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script src="battery.js"></script>
+	</body>
+</html>
