@@ -36,19 +36,19 @@ var battery_data = {
 		'name': 'Energizer 522 (9v-Alkaline)',
 		'H': 20,
 		'C': 650,
-		'k': 1.35,
+		'k': 1.25,
 	},
 	'e-e91': {
 		'name': 'Energizer E91 (AA-Alkaline)',
 		'H': 20,
 		'C': 2620,
-		'k': 1.35,
+		'k': 1.25,
 	},
 	'e-e92': {
 		'name': 'Energizer E92 (AAA-Alkaline)',
 		'H': 20,
 		'C': 1150,
-		'k': 1.35,
+		'k': 1.25,
 	},
 	'penn-gc2-110': {
 		'name': 'Penn GC2-110 (6v, car)',
