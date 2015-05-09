@@ -38,7 +38,7 @@ function new_scene(first) {
 	con.empty();
 	
 	for (var i=0; i<current.choices.length; i++) {
-		$('<div class="col s12"><button class="waves-effect waves-light btn" data-choice="' + i + '">' + current.choices[i].text + '</button></div>').appendTo(con);
+		$('<div class="col s12"><button class="btn" data-choice="' + i + '">' + current.choices[i].text + '</button></div>').appendTo(con);
 	}
 	
 	if (!first) {
@@ -48,8 +48,15 @@ function new_scene(first) {
 }
 
 function vertical_align() {
-	var div = $($('.et-wrapper div').find('.container')[slide]);
-	div.css('margin-top',(div.parent().height() - div.height())/2 + 'px' )
+	var win = $(this);
+	var con = $($('.et-wrapper div').find('.container')[slide]);
+	if (win.height() >= con.height()) {
+		var div = $($('.et-wrapper div').find('.container')[slide]);
+		div.css('margin-top',(div.parent().height() - div.height())/2 + 'px');
+	}
+	else if ($(document).height() > win.height()) {
+		con.css('margin-top', '0px');
+	}
 }
 
 $(document).ready(function() {
@@ -60,16 +67,9 @@ $('#home a').click(function() {
 	current = scenes.s0;
 	new_scene(true);
 });
-
-$(window).on('resize', function() {
-	var win = $(this);
-	var con = $($('.et-wrapper div').find('.container')[slide]);
-	if (win.height() >= con.height()) {
-		vertical_align();
-	}
-	else if ($(document).height() > con.height()) {
-		con.css('margin-top', '0px');
-	}
+	
+$(window).resize(function() {
+	vertical_align();
 });
 
 $('.restart').click(function() {

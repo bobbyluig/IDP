@@ -40,6 +40,11 @@ b {
 	outline: 1px solid white;
 }
 
+.btn:focus, .btn-large:focus {
+    background-color: #327a2b;
+	outline: 1px solid white;
+}
+
 p {
 	font-size: 1.4rem;
 	padding-bottom: 20px;
