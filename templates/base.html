@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	{% load staticfiles %}
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="description"  content="Project Z Museum" />
+		<meta name="keywords"  content="zombie, survival, emergency, preparedness, museum, education" />
+		
+		<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}" />
+	</head>
+
+	<body>
+		<header>
+			<nav class="hide-on-large-only">
+				<div class="container">
+					<a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="mdi-navigation-menu"></i></a>
+				</div>
+			</nav>
+		
+			<ul id="nav-mobile" class="side-nav fixed">
+				<li class="logo"><a id="logo-container" href="/" class="brand-logo">
+					<object id="front-page-logo" type="image/png" data="http://www.arcadebelgium.com/forum/pix14/projectz_logo.png"></object></a></li>
+				<li><a href="#!">First Sidebar Link</a></li>
+				<li><a href="#!">Second Sidebar Link</a></li>
+			</ul>
+		</header>
+		
+		{% block main %}{% endblock %}
+		
+		<footer class="page-footer">
+		</footer>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+	</body>
+	
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="elementTransitions.css" />
+</head>
+
+    <style>
+      .et-wrapper {
+		min-height: 90vh;
+	  }
+    </style>
+
+<body>
+	<header>
+	</header>
+	
+	<main>
+		<div class="container">
+			<div class="et-wrapper et-rotate" et-in="moveFromRight" et-out="moveToLeft">
+				<div class="et-page" style="background: green">
+					<h5>Page 1</h5>
+				</div>
+				<div class="et-page" style="background: blue">
+					<h5>Page 2</h5>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<footer>
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+	<script src="elementTransitions.js"></script>
+	<script src="choices.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+html {
+	background-color: black;
+}
+
+/* Sidenav  */
+
+header, main, footer {
+	padding-left: 240px;
+}
+
+@media #{$medium-and-down} {
+	header, main, footer {
+		padding-left: 0;
+	}
+
+}
+
+/* Sticky footer */
+
+body {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+header, footer {
+	flex-shrink: 0;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+#slide-out, #nav-mobile {
+	overflow-y: auto;
+}
+
+/* Logo */
+
+ul.side-nav.fixed li.logo {
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #ddd;
+}
+
+ul.side-nav.fixed li.logo:hover {
+	background-color: transparent;
+}
+
+#logo-container {
+	height: 57px;
+	margin-bottom: 32px;
+}
+
+#front-page-logo {
+	display: inline-block;
+	height: 100%;
+	pointer-events: none;
+};
