@@ -29,7 +29,7 @@ $card-bg-color: #fff !default;
 
 /*** Collapsible ***/
 $collapsible-height: 3rem !default;
-$collapsible-header-color: #fff !default;
+$collapsible-header-color: black !default;
 $collapsible-border-color: #ddd !default;
 
 
@@ -125,7 +125,7 @@ $h5-fontsize: 1.64rem !default;
 $h6-fontsize: 1rem !default;
 
 // Footer
-$footer-bg-color: $primary-color !default;
+$footer-bg-color: none !default;
 
 // Flowtext
 $range : $large-screen - $small-screen !default;

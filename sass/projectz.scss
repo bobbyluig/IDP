@@ -1,11 +1,63 @@
 @import "materialize";
 
 html {
-	background-color: #0e0e0e;
+	background-color: #1b1b1b;
 	color: white;
 }
 
 body {
+	// background: url("http://images.fineartamerica.com/images-medium-large/a-gloomy-day-venura-herath.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+b {
+	color: color("light-green", "accent-3");
+}
+
+/* Table of Contents */
+.table-of-contents {
+	position: fixed;
+	right: 0;
+	font-size: 1.64rem;
+	line-height: 1.64rem;
+	padding-right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	.row {
+		margin-bottom: 0px;
+	}
+
+	.infrastructure {
+		&.active {
+			color: color("yellow", "accent-3");
+		}
+	}
+	.social {
+		&.active {
+			color: color("light-blue", "accent-3");
+		}
+	}
+	.medical {
+		&.active {
+			color: color("red", "accent-3");
+		}
+	}
+	.survival {
+		&.active {
+			color: color("green", "accent-3");
+		}
+	}
+}
+	
+/* Offset Wrappers */
+.footer-wrapper {
+	height: 100%;
+	background-color: rgb(55, 55, 55);
+	padding-top: 20px;
+}
+
+.main-wrapper {
 	
 }
 
