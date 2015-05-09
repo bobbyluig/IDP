@@ -2,9 +2,11 @@ html, body {
 	height: 100%;
 	background-color: black;
 	color: #fff;
+    padding-top: 1px;
+    margin-top: -1px;
 }
 
-.et-wrapper, .valign-wrapper {
+.et-wrapper {
 	min-height: 100vh;
 	min-width: 100vw;
 }
@@ -17,8 +19,12 @@ html, body {
 	display: none;
 }
 
-.valign {
-	height: 100%;
+#home {
+	text-align: center;
+}
+
+#home .container {
+	display: inline-block;
 }
 
 b {

@@ -60,6 +60,8 @@ function vertical_align() {
 }
 
 $(document).ready(function() {
+	var div = $('#home');
+	div.css('margin-top',(div.parent().height() - div.height())/2 + 'px');
 	vertical_align();
 });
 
