@@ -22,7 +22,7 @@ html, body {
 }
 
 b {
-	color: #327a2b;
+	color: #76ff03;
 }
 
 .special-btn {
@@ -36,12 +36,12 @@ b {
 }
 
 .btn:hover, .btn-large:hover {
-    background-color: #327a2b;
+    background-color: rgba(118,255,3,0.5);
 	outline: 1px solid white;
 }
 
 .btn:focus, .btn-large:focus {
-    background-color: #327a2b;
+    background-color: rgba(118,255,3,0.5);
 	outline: 1px solid white;
 }
 

@@ -1,6 +1,12 @@
+@import "materialize";
+
 html {
-	background-color: black;
+	background-color: #0e0e0e;
 	color: white;
+}
+
+body {
+	
 }
 
 /* Sidenav  */
@@ -13,7 +19,6 @@ header, main, footer {
 	header, main, footer {
 		padding-left: 0;
 	}
-
 }
 
 /* Sticky footer */
