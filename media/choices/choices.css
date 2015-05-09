@@ -4,10 +4,47 @@ html, body {
 	color: #fff;
 }
 
-.et-wrapper {
-	min-height: 500px;
+.et-wrapper, .valign-wrapper {
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+.et-page {
+	overflow-y: auto;
 }
 
 .et-force-hide {
 	display: none;
+}
+
+.valign {
+	height: 100%;
+}
+
+b {
+	color: #327a2b;
+}
+
+.special-btn {
+	margin-top: 1.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.btn, .btn-large {
+	outline: 1px solid white;
+	background-color: #000;
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #327a2b;
+	outline: 1px solid white;
+}
+
+p {
+	font-size: 1.4rem;
+	padding-bottom: 20px;
+}
+
+.choices button{
+	margin: 10px 0 10px 0;
 }

@@ -8,15 +8,32 @@
 		<link rel="stylesheet" type="text/css" href="choices.css" />
 	</head>
 
-	<body class="valign-wrapper">
-		<div class="container valign">
-			<div class="et-wrapper et-rotate" et-in="moveFromRight" et-out="moveToLeft">
-				<div id="a" class="et-page" style="background-color:green">
-					<h5 class="center">Choices</h5>
-					<a class="waves-effect waves-light btn"><i class="mdi-file-cloud right"></i>Restart</a>
+	<body>
+		<div>
+			<div id="home" class="valign-wrapper">
+				<div class="valign container center">
+					<h3 class="light">Choices: A Game of Decisions</h3>
+					<h5 class="light">By: Project <b>Z</b> 2015</h5>
+					<a class="waves-effect waves-light btn special-btn"><i class="mdi-av-play-arrow right"></i>Play</a>
 				</div>
-				<div class="et-page">
-					<h5>Page 2</h5>
+			</div>
+		
+			<div class="et-wrapper" et-in="moveFromRight" et-out="moveToLeft" style="display:none">
+				<div class="et-page" data-slide="0">
+					<div class="container center">
+						<p class="light"></p>
+						<div class="row choices" style="padding-bottom: 20px"></div>
+						<div class="divider"></div>
+						<a class="waves-effect waves-light btn special-btn restart"><i class="mdi-av-loop right"></i>Restart</a>
+					</div>
+				</div>
+				<div class="et-page" data-slide="1">
+					<div class="container center">
+						<p class="light"></p>
+						<div class="row choices" style="padding-bottom: 20px"></div>
+						<div class="divider"></div>
+						<a class="waves-effect waves-light btn special-btn restart"><i class="mdi-av-loop right"></i>Restart</a>
+					</div>
 				</div>
 			</div>
 		</div>
