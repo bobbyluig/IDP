@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}Project Z{% endblock %}
 
@@ -7,4 +8,8 @@
 	<h3 class="center">Project <b>Z</b></h3>
 	<h5 class="light center">Museum of Survival</h3>
 </main>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/init.js' %}"></script>
 {% endblock %}
