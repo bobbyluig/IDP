@@ -175,7 +175,7 @@ $(document).ready(function() {
 			enabled: false,
 		},
 		title: {
-			text: 'A Fancy Graph',
+			text: 'Discharge Curves',
 		},
 		tooltip: {
 			headerFormat: '<span style="font-size: 10px">{point.key} mA</span><br/>',

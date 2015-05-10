@@ -18,11 +18,12 @@ from main import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^exhibitions/$', views.exhibitions, name='home'),
-    url(r'^learn/$', views.learn, name='home'),
-    url(r'^visit/$', views.visit, name='home'),
-    url(r'^gallery/$', views.gallery, name='home'),
-    url(r'^team/$', views.team, name='home'),
-    url(r'^faq/$', views.faq, name='home'),
-    url(r'^contact/$', views.contact, name='home'),
+    url(r'^exhibitions/$', views.exhibitions),
+    url(r'^learn/$', views.learn),
+    url(r'^visit/$', views.visit),
+    url(r'^gallery/$', views.gallery),
+    url(r'^team/$', views.team),
+    url(r'^faq/$', views.faq),
+    url(r'^contact/$', views.contact),
+    url(r'^resources/$', views.resources),
 ]

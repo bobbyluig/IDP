@@ -3,18 +3,41 @@
 html {
 	background-color: #1b1b1b;
 	color: white;
-}
-
-body {
-	// background: url("http://images.fineartamerica.com/images-medium-large/a-gloomy-day-venura-herath.jpg") no-repeat center center;
+	background: url("http://theartmad.com/wp-content/uploads/2015/04/Dark-Forest-7.jpg") no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 b {
 	color: color("light-green", "accent-3");
 }
 
+a {
+	color: color("light-green", "accent-3");
+}
+
+/* Home Page */
+#z {
+	transition: all 3s ease-in-out;
+	color: #fff;
+}
+
+.home-wrapper {
+	display: inline-block;
+	padding: 0 2rem 1.124rem 2rem;
+	background-color: rgba(27, 27, 27, 0.5);
+	
+	// Keep this?
+	// box-shadow: -10px 10px 40px rgba(118, 255, 3, 0.1);
+}
+
+/* Card */
+.card {
+	color: #fff;
+}
+
 /* Table of Contents */
+
 .table-of-contents {
 	position: fixed;
 	right: 0;
@@ -51,6 +74,7 @@ b {
 }
 	
 /* Offset Wrappers */
+
 .footer-wrapper {
 	height: 100%;
 	background-color: rgb(55, 55, 55);
@@ -58,7 +82,8 @@ b {
 }
 
 .main-wrapper {
-	
+	min-height: 100vh;
+	background-color: rgba(27, 27, 27, 0.97);
 }
 
 /* Sidenav  */
@@ -70,6 +95,10 @@ header, main, footer {
 @media #{$medium-and-down} {
 	header, main, footer {
 		padding-left: 0;
+	}
+	
+	.side-nav {
+		background-color: rgb(55, 55, 55);
 	}
 }
 
