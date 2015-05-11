@@ -34,6 +34,12 @@ a {
 
 
 // Positioning
+.valign {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+/*
 .valign-wrapper {
   @include flexbox();
   @include align(center);
@@ -42,6 +48,7 @@ a {
     display: block;
   }
 }
+*/
 
 
 ul {
