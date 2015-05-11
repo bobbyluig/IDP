@@ -35,9 +35,17 @@ a {
 
 // Positioning
 .valign {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	height: 24em;
+	justify-content: center;
+}
+
+@supports not (-ms-flex: 1) {
+	.valign {
+		height: auto;
+		min-height: 24em;
+	}
 }
 /*
 .valign-wrapper {

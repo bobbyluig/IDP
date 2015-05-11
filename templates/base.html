@@ -9,6 +9,25 @@
 		<meta name="description"  content="Project Z Museum" />
 		<meta name="keywords"  content="zombie, survival, emergency, preparedness, museum, education" />
 		
+		<!-- All them favicons -->
+		<link rel="apple-touch-icon" sizes="57x57" href="{% static 'icons/apple-touch-icon-57x57.png' %}">
+		<link rel="apple-touch-icon" sizes="60x60" href="{% static 'icons/apple-touch-icon-60x60.png' %}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{% static 'icons/apple-touch-icon-72x72.png' %}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{% static 'icons/apple-touch-icon-76x76.png' %}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{% static 'icons/apple-touch-icon-114x114.png' %}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{% static 'icons/apple-touch-icon-120x120.png' %}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{% static 'icons/apple-touch-icon-144x144.png' %}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{% static 'icons/apple-touch-icon-152x152.png' %}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/apple-touch-icon-180x180.png' %}">
+		<link rel="icon" type="image/png" href="{% static 'icons/favicon-32x32.png' %}" sizes="32x32">
+		<link rel="icon" type="image/png" href="{% static 'icons/android-chrome-192x192.png' %}" sizes="192x192">
+		<link rel="icon" type="image/png" href="{% static 'icons/favicon-96x96.png' %}" sizes="96x96">
+		<link rel="icon" type="image/png" href="{% static 'icons/favicon-16x16.png' %}" sizes="16x16">
+		<link rel="manifest" href="{% static 'icons/manifest.json' %}">
+		<meta name="msapplication-TileColor" content="#ffc40d">
+		<meta name="msapplication-TileImage" content="{% static 'icons/mstile-144x144.png' %}">
+		<meta name="theme-color" content="#ffffff">
+		
 		<link type="text/css" rel="stylesheet" href="{% static 'css/projectz.css' %}" />
 	</head>
 
@@ -22,11 +41,11 @@
 		
 			<ul id="nav-mobile" class="side-nav fixed">
 				<li class="logo"><a id="logo-container" href="/" class="brand-logo">
-					<object id="front-page-logo" type="image/png" data="http://www.arcadebelgium.com/forum/pix14/projectz_logo.png"></object>
+					<object id="front-page-logo" type="image/svg+xml" data="{% static 'img/logo.svg' %}">Your browser does not support SVG</object>
 				</a></li>
 				<li><a href="/"><i class="mdi-action-account-balance left"></i>Home</a></li>
 				<li><a href="/exhibitions"><i class="mdi-action-description left"></i>Exhibitions</a></li>
-				<li><a href="/learn"><i class="mdi-action-info-outline left"></i>Learn</a></li>
+				<li><a href="/learn"><i class="mdi-action-spellcheck left"></i>Learn</a></li>
 				<li><a href="/visit"><i class="mdi-action-explore left"></i>Visit</a></li>
 				<li><a href="/gallery"><i class="mdi-action-theaters left"></i>Gallery</a></li>
 				<li><a href="/team"><i class="mdi-action-account-child left"></i>Team</a></li>

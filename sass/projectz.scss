@@ -16,6 +16,31 @@ a {
 	color: color("light-green", "accent-3");
 }
 
+/* Equalizer aka pure magic */
+
+.row.equalizer {
+	display: flex;
+	flex-wrap: wrap;
+	
+	.col {
+		display: flex;
+	}
+	
+	.col > * {
+		flex: 1 1 0%;
+	}
+}
+
+/* Cards */
+
+.card, {
+	background-color: color("blue-grey", "darken-4");
+	
+	.card-reveal {
+		background-color: color("blue-grey", "darken-4");
+	}
+}
+
 /* Home Page */
 #z {
 	transition: all 3s ease-in-out;
@@ -24,6 +49,7 @@ a {
 
 .home-wrapper {
 	display: inline-block;
+	flex: 1;
 	padding: 0 2rem 1.124rem 2rem;
 	background-color: rgba(27, 27, 27, 0.5);
 	
@@ -82,8 +108,8 @@ a {
 }
 
 .main-wrapper {
-	min-height: 100vh;
-	background-color: rgba(27, 27, 27, 0.97);
+	min-height: 100%;
+	background-color: rgba(25, 25, 25, 0.97);
 }
 
 /* Sidenav  */
@@ -123,13 +149,19 @@ ul.side-nav.fixed:hover {
     overflow-y: auto;
 }
 
+@media #{$medium-and-down} {
+	ul.side-nav.fixed {
+		overflow-y: auto;
+	}
+}
+
 /* Logo */
 
 ul.side-nav.fixed li.logo {
 	text-align: center;
-	margin-top: 32px;
+	margin-top: 26px;
 	margin-bottom: 16px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid color("light-green", "accent-3");
 }
 
 ul.side-nav.fixed li.logo:hover {
@@ -137,8 +169,8 @@ ul.side-nav.fixed li.logo:hover {
 }
 
 #logo-container {
-	height: 57px;
-	margin-bottom: 32px;
+	height: 80px;
+	margin-bottom: 26px;
 }
 
 #front-page-logo {

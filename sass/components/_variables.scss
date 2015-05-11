@@ -1,21 +1,21 @@
 /*** Colors ***/
-$primary-color: color("grey", "darken-3") !default;
+$primary-color: color("grey", "darken-4") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
 $secondary-color: color("light-green", "accent-3") !default;
-$success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$success-color: color("light-green", "accent-3") !default;
+$error-color: color("red", "accent-3") !default;
+$link-color: color("light-green", "accent-3") !default;
 
 /*** Badges ***/
 $badge-bg-color: $secondary-color !default;
 
 /*** Buttons ***/
 $button-bg-color-disabled: #DFDFDF !default;
-$button-color: $secondary-color !default;
+$button-color: color("blue-grey", "darken-4") !default;
 $button-color-disabled: #9F9F9F !default;
-$button-color-flat: #343434 !default;
+$button-color-flat: none !default;
 $button-color-raised: #FFF !default;
 $button-floating-size: 37px !default;
 $button-height: 36px !default;
@@ -29,8 +29,8 @@ $card-bg-color: #fff !default;
 
 /*** Collapsible ***/
 $collapsible-height: 3rem !default;
-$collapsible-header-color: color("grey", "darken-3") !default;
-$collapsible-border-color: #ddd !default;
+$collapsible-header-color: color("blue-grey", "darken-4") !default;
+$collapsible-border-color: color("grey", "darken-4") !default;
 
 
 /*** Dropdown ***/
@@ -42,7 +42,7 @@ $icons-font-path: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/fon
 
 /*** Forms ***/
 // Text Inputs + Textarea
-$input-border-color: color("grey", "base") !default;
+$input-border-color: color("shades", "white") !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
 $input-focus-color: $secondary-color !default;
