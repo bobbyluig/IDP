@@ -16,6 +16,10 @@ a {
 	color: color("light-green", "accent-3");
 }
 
+.no-margin > * {
+	margin: 0 !important;
+}
+
 /* Equalizer aka pure magic */
 
 .row.equalizer {
