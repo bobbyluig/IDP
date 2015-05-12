@@ -150,6 +150,9 @@ a {
 
 .main-wrapper {
 	min-height: 100%;
+	position: absolute;
+	left: 240px;
+	right: 0;
 	background-color: rgba(25, 25, 25, 0.97);
 }
 
@@ -160,6 +163,9 @@ main {
 @media #{$medium-and-down} {
 	main {
 		height: calc(100% - 64px);
+	}
+	.main-wrapper {
+		left: 0;
 	}
 }
 
@@ -185,7 +191,7 @@ body {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 header, footer {
