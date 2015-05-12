@@ -4,6 +4,8 @@
 {% block title %}Project Z - Exhibitions{% endblock %}
 
 {% block main %}
+<link rel="stylesheet" type="text/css" href="elementTransitions.css" />
+
 <main>
 	<div class="col hide-on-small-only m3 l2">
 		<div class="toc-wrapper">
@@ -21,7 +23,7 @@
 					<i class="mdi-hardware-keyboard-arrow-down"></i>
 				</div>
 				<div class="row">
-					<a class="medical" href="#medical"><i class="mdi-image-healing"></i></a>
+					<a class="medical" href="#medical"><i class="mdi-maps-local-hospital"></i></a>
 				</div>
 				<div class="row">
 					<i class="mdi-hardware-keyboard-arrow-down"></i>
@@ -41,34 +43,207 @@
 		</div>
 		<div class="container">
 			<div class="section scrollspy" id="infrastructure">
-				<h5 class="yellow-text text-accent-3">Infrastructure</h5>
-				<p>Welcome to the beginning of the end of the world! Be sure to create your group wisely. The people you are with will be with you until the very end. Don't forget to pack your batteries. You're going to need the most durable ones since you don't know when you'll be able to find more. Now go on ahead, the the end of the world ends for no one!</p>
-				<h5 class="light center">Major Exhibits</h5>
+				<div class="row">
+					<div class="col center s12">
+						<div class="card-panel">
+							<h5>Infrastructure</h5>
+						</div>
+					</div>
+					<div class="col s12">
+						<div class="card-panel">
+							<p>Welcome to the beginning of the end of the world! Be sure to create your group wisely. The people you are with will be with you until the very end. Don't forget to pack your batteries. You're going to need the most durable ones since you don't know when you'll be able to find more. Now go on ahead, the the end of the world ends for no one!</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row center equalizer">
+					<div class="col s12 m6 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#i1">
+							<h2 class="center yellow-text text-accent-3"><i class="mdi-device-battery-unknown"></i></h2>
+							<h5 class="center light">Power Exhibit</h5>
+							<p class="light">Which type of battery should you choose to be prepared for an emergency?</p>
+						</div>
+					</div>
+					<div class="col s12 m6 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#i2">
+							<h2 class="center yellow-text text-accent-3"><i class="mdi-action-store"></i></h2>
+							<h5 class="center light">L.A. Exhibit</h5>
+							<p class="light">What can L.A. do to prepare infrastructure for an epidemic?</p>
+						</div>
+					</div>
+					<div class="col s12 offset-m3 m6 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#i3">
+							<h2 class="center yellow-text text-accent-3"><i class="mdi-action-perm-phone-msg"></i></h2>
+							<h5 class="center light">Communication Exhibit</h5>
+							<p class="light">Can you make the best decisions in an emergency situation?</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel">
+							<p>Infrastructure is the first group of exhibits you will encounter on your museum visit. In the case of a widespread epidemic, most of the infrastructure in Los Angeles or your city will quickly collapse if proper measures are not put into place.</p>
+							<p>The primary purpose of these exhibits however are to help you prepare for infrastructure breakdown. After any emergency, government agencies and community leadership may not be ready in time to assist. In this case, preparing beforehand can greatly improve the community's chance of survival. Learn which type of battery is most suited for which situation and predict how long they will last. Also, see the optimal ways of interaction during times of distress.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="divider"></div>
 			
 			<div class="section scrollspy" id="social">
-				<h5 class="blue-text text-accent-3">Social</h5>
-				<p>Maps are essential during an emergency. Without a map, it is almost impossible to organize rescues or safe escapes.</p>
-				<p>After some sort of biological attack those infected with the pathogen will need to be quarantined and placed under medical care. This will require the identification of those infected. </p>
-				<p>Now that you know who in your group is infected and who isn't, you need to learn how to survive the days ahead. The downfall of society as we know will surely cause massive panic and rioting. In order to survive a riot, you must learn a set of skills that will come I handy in such a situation.</p>
+				<div class="row">
+					<div class="col center s12">
+						<div class="card-panel">
+							<h5>Social</h5>
+						</div>
+					</div>
+					<div class="col s12">
+						<div class="card-panel">
+							<p>Maps are essential during an emergency. Without a map, it is almost impossible to organize rescues or safe escapes.</p>
+							<p>After some sort of biological attack those infected with the pathogen will need to be quarantined and placed under medical care. This will require the identification of those infected. </p>
+							<p>Now that you know who in your group is infected and who isn't, you need to learn how to survive the days ahead. The downfall of society as we know will surely cause massive panic and rioting. In order to survive a riot, you must learn a set of skills that will come I handy in such a situation.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row center equalizer">
+					<div class="col s12 m6">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s1">
+							<h2 class="center light-blue-text text-accent-3"><i class="mdi-social-group-add"></i></h2>
+							<h5 class="center light">Rioting Exhibit</h5>
+							<p class="light">How do you survive a riot?</p>
+						</div>
+					</div>
+					<div class="col s12 m6">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s2">
+							<h2 class="center light-blue-text text-accent-3"><i class="mdi-action-report-problem"></i></h2>
+							<h5 class="center light">Social Exhibit</h5>
+							<p class="light">Quarantine. Rationing. Paranoia.</p>
+						</div>
+					</div>
+					<div class="col s12 m6">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s3">
+							<h2 class="center light-blue-text text-accent-3"><i class="mdi-action-settings-voice"></i></h2>
+							<h5 class="center light">Communication Exhibit</h5>
+							<p class="light">Language is a powerful tool in times of distress.</p>
+						</div>
+					</div>
+					<div class="col s12 m6">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s3">
+							<h2 class="center light-blue-text text-accent-3"><i class="mdi-notification-vpn-lock"></i></h2>
+							<h5 class="center light">Geography Exhibit</h5>
+							<p class="light">Pinpoint the safest areas to be.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel">
+							<p>The following is a super descriptive description of everything social. The following is a super descriptive description of everything social. The following is a super descriptive description of everything social. The following is a super descriptive description of everything social.</p>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 			<div class="divider"></div>
 			
 			<div class="section scrollspy" id="medical">
-				<h5 class="red-text text-accent-3">Medical</h5>
-				<p>As you go through your everyday life after the day of the apocalypse, you may encounter various situations in which knowing certain medical skills may be the difference between the survival or death of someone. Learn and practice your skills in this exhibit!</p>
+				<div class="row">
+					<div class="col center s12">
+						<div class="card-panel">
+							<h5>Medical</h5>
+						</div>
+					</div>
+					<div class="col s12">
+						<div class="card-panel">
+							<p>Oh no! A member of your group is injured! As you go through your everyday life after the day of the apocalypse, you may encounter various situations in which knowing certain medical skills may be the difference between the survival or death of someone. Learn and practice your skills in this exhibit!</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row center equalizer">
+					<div class="col s12 m6 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s1">
+							<h2 class="center red-text text-accent-3"><i class="mdi-image-tune"></i></h2>
+							<h5 class="center light">Control Exhibit</h5>
+							<p class="light">Is time to shut-down the virus for good.</p>
+						</div>
+					</div>
+					<div class="col s12 m6 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s2">
+							<h2 class="center red-text text-accent-3"><i class="mdi-content-block"></i></h2>
+							<h5 class="center light">Prevention Exhibit</h5>
+							<p class="light">How can you evade the epidemic?</p>
+						</div>
+					</div>
+					<div class="col s12 m6 offset-m3 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s3">
+							<h2 class="center red-text text-accent-3"><i class="mdi-image-healing"></i></h2>
+							<h5 class="center light">Treatment Exhibit</h5>
+							<p class="light">Quickly! Fix the wound before you get infected!</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel">
+							<p>The following is a super descriptive description of everything medical. The following is a super descriptive description of everything medical. The following is a super descriptive description of everything medical. The following is a super descriptive description of everything medical.</p>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 			<div class="divider"></div>
 			
 			<div class="section scrollspy" id="survival">
-				<h5 class="green-text text-accent-3">Survival</h5>
-				<p>Unwilling sportsmen he in questions september therefore described so. Attacks may set few believe moments was. Reasonably how possession shy way introduced age inquietude. Missed he engage no exeter of. Still tried means we aware order among on. Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid in so vexed words. Gay welcome led add lasting chiefly say looking.</p>
-				<p>With my them if up many. Lain week nay she them her she. Extremity so attending objection as engrossed gentleman something. Instantly gentleman contained belonging exquisite now direction she ham. West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest sex bachelor the may delicate its yourself. As he instantly on discovery concluded to. Open draw far pure miss felt say yet few sigh. </p>
-				<p>Unwilling sportsmen he in questions september therefore described so. Attacks may set few believe moments was. Reasonably how possession shy way introduced age inquietude. Missed he engage no exeter of. Still tried means we aware order among on. Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid in so vexed words. Gay welcome led add lasting chiefly say looking.</p>
-				<p>With my them if up many. Lain week nay she them her she. Extremity so attending objection as engrossed gentleman something. Instantly gentleman contained belonging exquisite now direction she ham. West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest sex bachelor the may delicate its yourself. As he instantly on discovery concluded to. Open draw far pure miss felt say yet few sigh. </p>
-				<p>Unwilling sportsmen he in questions september therefore described so. Attacks may set few believe moments was. Reasonably how possession shy way introduced age inquietude. Missed he engage no exeter of. Still tried means we aware order among on. Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid in so vexed words. Gay welcome led add lasting chiefly say looking.</p>
-				<p>With my them if up many. Lain week nay she them her she. Extremity so attending objection as engrossed gentleman something. Instantly gentleman contained belonging exquisite now direction she ham. West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest sex bachelor the may delicate its yourself. As he instantly on discovery concluded to. Open draw far pure miss felt say yet few sigh. </p>
+				<div class="row">
+					<div class="col center s12">
+						<div class="card-panel">
+							<h5>Survival</h5>
+						</div>
+					</div>
+					<div class="col s12">
+						<div class="card-panel">
+							<p>Oh no! A member of your group is injured! As you go through your everyday life after the day of the apocalypse, you may encounter various situations in which knowing certain medical skills may be the difference between the survival or death of someone. Learn and practice your skills in this exhibit!</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row center equalizer">
+					<div class="col s12 m6 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s1">
+							<h2 class="center green-text text-accent-3"><i class="mdi-maps-local-grocery-store"></i></h2>
+							<h5 class="center light">Supplies Exhibit</h5>
+							<p class="light">Get the necessary supplies. Pack the supplies.</p>
+						</div>
+					</div>
+					<div class="col s12 m6 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s2">
+							<h2 class="center green-text text-accent-3"><i class="mdi-image-landscape"></i></h2>
+							<h5 class="center light">Skills Exhibit</h5>
+							<p class="light">It's more than just tying a knot.</p>
+						</div>
+					</div>
+					<div class="col s12 m6 offset-m3 l4">
+						<div class="card-panel hvr-underline-from-center modal-trigger" data-modal="#s3">
+							<h2 class="center green-text text-accent-3"><i class="mdi-editor-mode-edit"></i></h2>
+							<h5 class="center light">Plan Exhibit</h5>
+							<p class="light">Prepare before catastrophe, not after.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col s12">
+						<div class="card-panel">
+							<p>The following is a super descriptive description of everything survival. The following is a super descriptive description of everything survival. The following is a super descriptive description of everything survival. The following is a super descriptive description of everything survival.</p>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
