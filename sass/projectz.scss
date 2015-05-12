@@ -157,6 +157,12 @@ main {
 	height: 100%;
 }
 
+@media #{$medium-and-down} {
+	main {
+		height: calc(100% - 64px);
+	}
+}
+
 /* Sidenav  */
 
 header, main, footer {
