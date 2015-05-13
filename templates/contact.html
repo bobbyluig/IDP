@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}Project Z - Contact{% endblock %}
 
@@ -14,11 +15,11 @@
 		<div class="container">
 			<div class="section">
 				<div class="row">
-					<form class="col s12" action="contact.php">
+					<form class="col s12" action="/contact/send/">
 						<div class="row">
 							<div class="input-field col s12">
 								<i class="mdi-action-account-circle prefix"></i>
-								<input id="name" name="first" type="text" class="validate">
+								<input id="name" name="name" type="text" class="validate">
 								<label for="name" class="">Full Name</label>
 							</div>
 						</div>
@@ -38,10 +39,10 @@
 						</div>
 						{% csrf_token %}
 						<br>
-						<div class="row center light-green-text text-accent-3">
-							<a class="waves-effect waves-light btn-flat" type="submit" name="action">Submit
+						<div class="row center">
+							<button class="waves-effect waves-light btn" type="submit" name="action">Submit
 								<i class="mdi-content-send right"></i>
-							</a>
+							</button>
 						</div>
 					</form>
 				</div>
@@ -50,4 +51,8 @@
 		
 	</div>
 </main>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'js/contact.js' %}"></script>
 {% endblock %}

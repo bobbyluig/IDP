@@ -111,8 +111,8 @@ $table-striped-color: #f2f2f2 !default;
 
 /*** Toasts ***/
 $toast-height: 48px !default;
-$toast-color: #323232 !default;
-$toast-text-color: #fff !default;
+$toast-color: color("blue-grey", "darken-4") !default;
+$toast-text-color: color("light-green", "accent-3") !default;
 
 /*** Typography ***/
 $off-black: rgba(0, 0, 0, 0.87) !default;

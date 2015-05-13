@@ -26,4 +26,6 @@ urlpatterns = [
     url(r'^faq/$', views.faq),
     url(r'^contact/$', views.contact),
     url(r'^resources/$', views.resources),
+	
+    url(r'^contact/send/$', views.contact_api),
 ]

@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.views.decorators.cache import cache_page
+from main.contact import contact as send_message
+from django.http import HttpResponse
+import json
 
 @cache_page(60 * 15)
 def home(request):
@@ -36,3 +39,7 @@ def contact(request):
 @cache_page(60 * 15)
 def resources(request):
 	return render(request, 'resources.html')
+	
+def contact_api(request):
+	response = send_message(request)
+	return HttpResponse(json.dumps(response), content_type='application/json')
