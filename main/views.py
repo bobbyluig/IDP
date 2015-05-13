@@ -6,39 +6,39 @@ import json
 
 @cache_page(60 * 15)
 def home(request):
-	return render(request, 'home.html')
+	return render(request, 'home.html', {'footer': False})
 
 @cache_page(60 * 15)	
 def exhibitions(request):
-	return render(request, 'exhibitions.html')
+	return render(request, 'exhibitions.html', {'footer': True})
 
 @cache_page(60 * 15)
 def learn(request):
-	return render(request, 'learn.html')
+	return render(request, 'learn.html', {'footer': True})
 	
 @cache_page(60 * 15)
 def visit(request):
-	return render(request, 'visit.html')
+	return render(request, 'visit.html', {'footer': True})
 	
 @cache_page(60 * 15)
 def gallery(request):
-	return render(request, 'gallery.html')
+	return render(request, 'gallery.html', {'footer': True})
 	
 @cache_page(60 * 15)
 def team(request):
-	return render(request, 'team.html')
+	return render(request, 'team.html', {'footer': True})
 	
 @cache_page(60 * 15)
 def faq(request):
-	return render(request, 'faq.html')
+	return render(request, 'faq.html', {'footer': True})
 	
 @cache_page(60 * 15)
 def contact(request):
-	return render(request, 'contact.html')
+	return render(request, 'contact.html', {'footer': True})
 	
 @cache_page(60 * 15)
 def resources(request):
-	return render(request, 'resources.html')
+	return render(request, 'resources.html', {'footer': True})
 	
 def contact_api(request):
 	response = send_message(request)

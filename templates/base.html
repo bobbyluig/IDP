@@ -57,25 +57,25 @@
 		
 		{% block main %}{% endblock %}
 		
-		<!--
-		<footer class="page-footer">
+		{% if footer %}
+		<footer>
 			<div class="footer-wrapper">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Project Z Museum</h5>
-                <p class="grey-text text-lighten-4">Are you ready for the apocalypse?</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Connect</h5>
-                <a class="grey-text text-lighten-3" href="#!">GitHub</a> <b>|</b> 
-				<a class="grey-text text-lighten-3" href="#!">Facebook</a>
-              </div>
-            </div>
-          </div>
+				<div class="container">
+					<div class="row">
+						<div class="col l6 s12">
+							<h5 class="white-text">Project Z Museum</h5>
+							<p class="grey-text text-lighten-4">Are you ready for the apocalypse?</p>
+						</div>
+						<div class="col l4 offset-l2 s12">
+							<h5 class="white-text">Connect</h5>
+							<a class="grey-text text-lighten-3" href="#!">GitHub</a> <b>|</b> 
+							<a class="grey-text text-lighten-3" href="#!">Facebook</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
-		-->
+		{% endif %}
 		
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
