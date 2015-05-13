@@ -44,7 +44,7 @@ a {
 @supports not (-ms-flex: 1) {
 	.valign {
 		height: auto;
-		min-height: 24em;
+		// min-height: 24em;
 	}
 }
 /*
