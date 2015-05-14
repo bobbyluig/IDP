@@ -10,8 +10,8 @@ def contact(request):
 	f = forms.EmailField()
 	
 	name = request.POST['name']
-	message = request.POST['email']
-	
+	message = request.POST['message']
+		
 	try:
 		email = f.clean(request.POST['email'])
 	except:
@@ -26,6 +26,9 @@ def contact(request):
 	else:
 		time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 		mail_message = 'Dear maintainer,\n\nThe following message was sent by %s on %s.\n\n"%s"\n\nPlease respond to his/her email: %s.' % (name, time, message, email)
+		
+		# Debug purposes
+		return {'success': False, 'message': 'Your message was not sent. Please try again later.'}
 		
 		try:
 			send_mail('Contact Us', mail_message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER], fail_silently=False)
