@@ -20,6 +20,24 @@ a {
 	margin: 0 !important;
 }
 
+/* Preload */
+
+.preload * {
+	transition: none !important;
+}
+
+/* Footer */
+ 
+footer a {
+	transition: color 0.5s ease-in-out;
+	color: #fff;
+		
+	&:hover {
+		color: color("light-green", "accent-3");
+	}
+}
+
+
 /* Underline From Center */
 
 .hvr-underline-from-center {
@@ -83,8 +101,9 @@ a {
 }
 
 /* Home Page */
+
 #z {
-	transition: all 3s ease-in-out;
+	transition: color 3s ease-in-out;
 	color: #fff;
 }
 
@@ -99,6 +118,7 @@ a {
 }
 
 /* Card */
+
 .card {
 	color: #fff;
 }
@@ -144,7 +164,7 @@ a {
 
 .footer-wrapper {
 	height: 100%;
-	background-color: rgb(55, 55, 55);
+	background-color: rgba(55, 55, 55, 0.5);
 	padding-top: 20px;
 }
 
@@ -174,20 +194,22 @@ header, main, footer {
 
 body {
 	display: flex;
-	min-height: 100vh;
+	// min-height: 100vh;
+	height: 100vh; /* This is the last draw IE. */
 	flex-direction: column;
 	overflow-y: scroll;
 }
 
 header, footer {
 	flex: 0 0 auto;
-	overflow: hidden;
+	overflow: hidden; /* Hey IE, I know how to NOT follow standards as well. */
 }
 
 main {
 	flex: 1 0 auto;
 	position: relative;
 	display: flex;
+	overflow: hidden; /* Again IE? When will you stop? */
 }
 
 ul.side-nav.fixed:hover {

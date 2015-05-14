@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('.button-collapse').sideNav();
+	$('html').removeClass('preload');
 	
 	$('form').submit(function() {
 		$.ajax({
