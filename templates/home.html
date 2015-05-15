@@ -12,8 +12,25 @@
 		</div>
 	</div>
 </main>
+
+{% if upgrade %}
+<div id="upgrade-modal" class="modal">
+	<div class="modal-content">
+		<h4>Upgrade Time?</h4>
+		<p>This site uses the latest CSS3 and HTML5 standards. Your browser is outdated and may not perform well on this site! Please consider upgrading. This site fully supports:</p>
+		<p>Chrome &ge; 35 <b>|</b> Firefox &ge; 31 <b>|</b> Internet Explorer &ge; 10 <b>|</b> Safari &ge; 7 <b>|</b> Opera &ge; 22</p>
+		<p>Note that this is the only time you will receive this message.</p>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class=" modal-action modal-close waves-effect waves-light btn">I Understand</a>
+	</div>
+</div>
+{% endif %}
 {% endblock %}
 
 {% block scripts %}
+{% if upgrade %}
+<script type="text/javascript" src="{% static 'js/upgrade.js' %}"></script>
+{% endif %}
 <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 {% endblock %}
