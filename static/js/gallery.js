@@ -1,8 +1,1 @@
-$(document).ready(function() {
-	$('html').removeClass('preload');
-	$('.button-collapse').sideNav();
-	$('.slider').slider({
-		height: 400,
-		interval: 5000,
-	});
-});
+$(document).ready(function(){$("html").removeClass("preload"),$(".button-collapse").sideNav(),$(".slider").slider({height:400,interval:5e3})});

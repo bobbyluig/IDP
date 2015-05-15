@@ -1,5 +1,1 @@
-$(document).ready(function() {
-	$('html').removeClass('preload');
-	$('.button-collapse').sideNav();
-	$('.modal-trigger').leanModal();
-});
+$(document).ready(function(){$("html").removeClass("preload"),$(".button-collapse").sideNav(),$(".modal-trigger").leanModal()});
