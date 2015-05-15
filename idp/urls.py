@@ -15,17 +15,26 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from main import views
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+
+sitemaps = {
+	'static': StaticViewSitemap,
+}
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^exhibitions/$', views.exhibitions),
-    url(r'^learn/$', views.learn),
-    url(r'^visit/$', views.visit),
-    url(r'^gallery/$', views.gallery),
-    url(r'^team/$', views.team),
-    url(r'^faq/$', views.faq),
-    url(r'^contact/$', views.contact),
-    url(r'^resources/$', views.resources),
+    url(r'^exhibitions/$', views.exhibitions, name='exhibitions'),
+    url(r'^learn/$', views.learn, name='learn'),
+    url(r'^visit/$', views.visit, name='visit'),
+    url(r'^gallery/$', views.gallery, name='gallery'),
+    url(r'^team/$', views.team, name='team'),
+    url(r'^faq/$', views.faq, name='faq'),
+    url(r'^contact/$', views.contact, name='contact'),
+    url(r'^resources/$', views.resources, name='resources'),
 	
     url(r'^contact/send/$', views.contact_api),
+	
+	url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+		name='django.contrib.sitemaps.views.sitemap')
 ]

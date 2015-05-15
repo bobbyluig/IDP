@@ -12,11 +12,11 @@ $link-color: color("light-green", "accent-3") !default;
 $badge-bg-color: $secondary-color !default;
 
 /*** Buttons ***/
-$button-bg-color-disabled: #DFDFDF !default;
-$button-color: color("blue-grey", "darken-4") !default;
+$button-bg-color-disabled: color("grey", "darken-4") !default;
+$button-color: color("light-green", "accent-3") !default;
 $button-color-disabled: #9F9F9F !default;
 $button-color-flat: none !default;
-$button-color-raised: #FFF !default;
+$button-color-raised: color("shades", "black") !default;
 $button-floating-size: 37px !default;
 $button-height: 36px !default;
 $button-font-size-shared: 1.3rem !default;

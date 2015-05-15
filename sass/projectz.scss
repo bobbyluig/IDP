@@ -16,7 +16,33 @@ a {
 	color: color("light-green", "accent-3");
 }
 
-.no-margin > * {
+/* True Flex Layout */
+
+.row.true-flex {
+	display: flex;
+	flex-wrap: wrap;
+	
+	&.center-flex {
+		justify-content: center;
+	}
+	
+	&.equalizer {
+		display: flex;
+		flex-wrap: wrap;
+		
+		.col {
+			display: flex;
+		}
+		
+		.col > * {
+			flex: 1 1 0%;
+		}
+	}
+}
+
+/* Helpers */
+
+.no-margin {
 	margin: 0 !important;
 }
 
@@ -73,21 +99,6 @@ footer a {
 .hvr-underline-from-center:active:before {
     left: 0;
     right: 0;
-}
-
-/* Equalizer aka pure magic */
-
-.row.equalizer {
-	display: flex;
-	flex-wrap: wrap;
-	
-	.col {
-		display: flex;
-	}
-	
-	.col > * {
-		flex: 1 1 0%;
-	}
 }
 
 /* Cards */

@@ -41,6 +41,10 @@ a {
 	justify-content: center;
 }
 
+.valign * {
+	display: block;
+}
+
 @supports not (-ms-flex: 1) {
 	.valign {
 		height: auto;
