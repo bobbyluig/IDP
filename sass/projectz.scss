@@ -8,6 +8,8 @@ html {
 	background-attachment: fixed;
 }
 
+/* Accent Colors */
+
 b {
 	color: color("light-green", "accent-3");
 }
@@ -44,6 +46,10 @@ a {
 
 .no-margin {
 	margin: 0 !important;
+}
+
+.card-panel > .valign * {
+	display: block;
 }
 
 /* Preload */
