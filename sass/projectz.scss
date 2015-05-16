@@ -180,7 +180,7 @@ footer a {
 /* Offset Wrappers */
 
 .footer-wrapper {
-	height: 100%;
+	flex: 1;
 	background-color: rgba(55, 55, 55, 0.5);
 	padding-top: 20px;
 }
@@ -220,6 +220,7 @@ body {
 }
 
 header, footer {
+	display: flex;
 	flex: 0 0 auto;
 	overflow: hidden; /* Hey IE, I know how to NOT follow standards as well. */
 }
