@@ -1,95 +1,87 @@
 var scenes = {
-	s0: {
-		text: 'Make your section. Do it wisely.', 
+	start: {
+		text: 'Choose your character.', 
+		next: function() { return scenes.s1 },
 		choices: [
-			{text: 'Choice 1', next: function() { return scenes.s1 } },
-			{text: 'Choice 2', next: function() { return scenes.s1 } },
-			{text: 'Choice 3', next: function() { return scenes.s1 } },
-			{text: 'Choice 4', next: function() { return scenes.s1 } },
+			{text: 'Choice 1', score: 1},
+			{text: 'Choice 2', score: 0},
 		]
 	},
 	s1: {
-		text: 'You have chosen. Now choose again.', 
+		text: 'Dear, it’s been three hours, since a biological weapon has been exploited in Los Angeles! Everyone is panicking! Everything has been destroyed-the roads, houses, and utilities, all of it! Not to mention, there won’t be enough food to satisfy the demand of everyone until our houses are fixed and we get back to working! What should we do?',
+		next: function() { return scenes.end },
 		choices: [
-			{text: 'Choice 1', next: function() { return scenes.s0 } },
-			{text: 'Choice 2', next: function() { return scenes.s0 } },
-			{text: 'Choice 3', next: function() { return scenes.s0 } },
+			{text: 'First off, we need to quickly calculate how many days we can live off of our current saving and stock up food and emergency supplies.  We might as well hog as much of the commodities in the supermarket as possible. Sweetie, we are in a situation of life and death.', score: 0},
+			{text: 'First off, we need to use Catastrophic Door Hanger that the Los Angeles City Emergency Management Department has distributed to everyone. Since we’re okay, we should hang it with the green side facing up.', score: 1},
 		]
+	},
+	end: {
+		exec: function(term) { term.echo('You scored ' + uscore + ' out of ' + utotal + '.'); },
 	},
 };
 
-var current = null;
-var slide = 0;
-
-function new_scene(first) {
-	if (first) {
-		$('#home').fadeOut(1000, function() {
-			$('.et-wrapper').fadeIn();
-			vertical_align();
-		});
-		nextslide = $('.et-page-current');
-	} else {
-		nextslide = $('.et-page[id!="home"]:not(.et-page-current)').first();
-	}
-	
-	slide = (slide === 0 && !first) ? 1 : 0;
-	nextslide.find('p').text(current.text);
-	con = nextslide.find('.row');
-	con.empty();
-	
-	for (var i=0; i<current.choices.length; i++) {
-		$('<div class="col s12"><button class="btn" data-choice="' + i + '">' + current.choices[i].text + '</button></div>').appendTo(con);
-	}
-	
-	if (!first) {
-		PageTransitions.animate($('.et-wrapper'));
-		vertical_align();
+var commands = {
+	start: {
+		help: 'Starts the game.',
+		run: function(term) { if (current) { term.error('Game has already started!'); } else { current = scenes.start; start_scene(term); } },
+	},
+	restart: {
+		help: 'Resets the game.',
+		run: function(term) { if (!current) { term.error('Game has not been started yet!'); } else { current = null; term.purge(); $('#terminal').remove(); create_terminal(); } },
+	},
+	help: {
+		help: 'Displays this message.',
+		run: function(term) { term.echo('This is where help will be!'); },
 	}
 }
 
-function vertical_align() {
-	var win = $(this);
-	var con = $($('.et-wrapper div').find('.container')[slide]);
-	if (win.height() >= con.height()) {
-		var div = $($('.et-wrapper div').find('.container')[slide]);
-		div.css('margin-top',(div.parent().height() - div.height())/2 + 'px');
+function start_scene(term) {
+	if (current.hasOwnProperty('exec')) {
+		current.exec(term);
 	}
-	else if ($(document).height() > win.height()) {
-		con.css('margin-top', '0px');
+	term.echo(current.text);
+	for (var i = 0; i < current.choices.length; i++) {
+		term.echo('[[b;#76FF03;]' + String(i + 1) + ':] ' + current.choices[i].text);
 	}
+}
+
+function end_scene(choice) {
+	utotal += 1;
+	uscore += current.choices[choice].score;
+	current = current.next();
+}
+
+var slide = 0;
+var uscore = 0;
+var utotal = 0;
+var current = null;
+
+function create_terminal() {
+	$('<div id="terminal" class="terminal" style="width: 90%;"></div>').prependTo('body');
+
+	$('#terminal').terminal(function(command, term) {
+		if (commands.hasOwnProperty(command)) {
+			commands[command].run(term);
+		}
+		else if (current !== null && current.choices.length >= parseInt(command) && parseInt(command) > 0) {
+			end_scene(parseInt(command) - 1);
+			start_scene(term);
+		}
+		else if (current === null && command !== '') {
+			term.error('Game has not been started! Enter `start` to being the game.');
+		}
+		else {
+			term.error('Invalid selection/command `' + command + '`.');
+		}
+	}, {
+		greetings: 	'[[bgu;#76FF03;]Welcome to S.O.S. - Communcation Storyline]\n' +
+					'Type "help" at anytime to show the help screen.\n' +
+					'',
+		name: 'S.O.S.',
+		height: 600,
+		prompt: '> '});
 }
 
 $(document).ready(function() {
-	var div = $('#home');
-	div.css('margin-top',(div.parent().height() - div.height())/2 + 'px');
-	vertical_align();
-});
-
-$('#home a').click(function() {
-	current = scenes.s0;
-	new_scene(true);
-});
-	
-$(window).resize(function() {
-	vertical_align();
-});
-
-$('.restart').click(function() {
-	$('body').fadeOut(1000, function() {
-		$('.et-page').removeClass('et-page-current').removeClass('et-force-hide');
-		$('.et-wrapper').hide();
-		$('.choices').empty();
-		$('p').empty();
-		$('#home').show();
-		PageTransitions.init();
-		$('body').fadeIn();
-	});
-	slide = 0;
-	current = null;
-});
-
-$('.choices').on('click', 'button', function() {
-	decision = $(this).data('choice');
-	current = current.choices[decision].next();
-	new_scene(false);
+	create_terminal();
 });
