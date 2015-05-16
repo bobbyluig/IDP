@@ -192,4 +192,6 @@ $(document).ready(function() {
 	}
 
 	chart = new Highcharts.Chart(options);
+	
+	$('select').trigger('change');
 });
