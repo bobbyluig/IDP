@@ -90,7 +90,7 @@ var slide, uscore, utotal, current, character, twidth, theight;
 function create_terminal() {
 	slide = 0, uscore = 0, utotal = 0, current = null, character = null;
 
-	$('<div id="terminal" class="terminal"></div>').appendTo('.terminal-wrapper');
+	$('<div id="terminal" class="terminal"></div>').prependTo('.terminal-wrapper');
 
 	$('#terminal').terminal(function(command, term) {
 		twidth = term.cols(); theight = term.rows();
