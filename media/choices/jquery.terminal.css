@@ -21,6 +21,30 @@
 .cmd > .clipboard {
     position: fixed;
 }
+
+html {
+	font-size: 20px;
+	background-color: black;
+}
+
+body {
+	transform-style: preserve-3d;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+.terminal-wrapper {
+	flex: 0 0 auto;
+	height: 90%;
+	width: 90%;
+	background-color: black;
+	overflow-y: scroll;
+}
+
 .terminal {
     padding: 10px;
     position: relative;
@@ -41,46 +65,46 @@
 @keyframes blink {
   0%, 100% {
         background-color: #000;
-        color: #aaa;
+        color: #76FF03;
   }
   50% {
-        background-color: #bbb; /* not #aaa because it's seem there is Google Chrome bug */
+        background-color: #76FF03; /* not #aaa because it's seem there is Google Chrome bug */
         color: #000;
   }
 }
 @-webkit-keyframes blink {
   0%, 100% {
         background-color: #000;
-        color: #aaa;
+        color: #76FF03;
   }
   50% {
-        background-color: #bbb;
+        background-color: #76FF03;
         color: #000;
   }
 }
 @-ms-keyframes blink {
   0%, 100% {
         background-color: #000;
-        color: #aaa;
+        color: #76FF03;
   }
   50% {
-        background-color: #bbb;
+        background-color: #76FF03;
         color: #000;
   }
 }
 @-moz-keyframes blink {
   0%, 100% {
         background-color: #000;
-        color: #aaa;
+        color: #76FF03;
   }
   50% {
-        background-color: #bbb;
+        background-color: #76FF03;
         color: #000;
   }
 }
 .terminal .terminal-output div div, .cmd .prompt {
     display: block;
-    line-height: 14px;
+    line-height: 1.3rem;
     height: auto;
 }
 .cmd .prompt {
@@ -88,14 +112,14 @@
 }
 .terminal, .cmd {
     font-family: FreeMono, monospace;
-    color: #aaa;
+    color: #c0c0c0;
     background-color: #000;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 1rem;
+    line-height: 1.3rem;
 }
 .terminal-output > div {
     /*padding-top: 3px;*/
-    min-height: 14px;
+    min-height: 1.3rem;
 }
 .terminal .terminal-output div span {
     display: inline-block;
