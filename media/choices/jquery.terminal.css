@@ -139,13 +139,13 @@ body {
     /*display: inline-block; */
 }
 .terminal .inverted, .cmd .inverted, .cmd .cursor.blink {
-    background-color: #aaa;
+    background-color: #c0c0c0;
     color: #000;
 }
 .terminal .terminal-output div div::-moz-selection,
 .terminal .terminal-output div span::-moz-selection,
 .terminal .terminal-output div div a::-moz-selection {
-    background-color: #aaa;
+    background-color: #c0c0c0;
     color: #000;
 }
 .terminal .terminal-output div div::selection,
@@ -153,7 +153,7 @@ body {
 .terminal .terminal-output div span::selection,
 .cmd > span::selection,
 .cmd .prompt span::selection {
-    background-color: #aaa;
+    background-color: #c0c0c0;
     color: #000;
 }
 .terminal .terminal-output div.error, .terminal .terminal-output div.error div {

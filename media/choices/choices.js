@@ -21,7 +21,7 @@ var scenes = {
 		next: function() { return scenes.c3 },
 		choices: [
 			{text: "Yes, there are more benefits to helping our community. Cooperation with 25-40 households will make the process of rebuilding our neighborhood faster!", reply: "I agree.", score: 1},
-			{text: "No, we need to focus on our family first before we can aid others. It's every man for himself! After calculating the amount of days we can live off of our savings, we must devise an emergency plan now and map out the hazards in our area.", reply: "No. That's selfish. We must help. There are those that are less fortunate than us.", score: 0},
+			{text: "No, we need to focus on our family first before we can aid others. It's every man for himself! After calculating the amount of days we can live off of our savings, we must devise an emergency plan now and map out the hazards in our area.", reply: "No. That's selfish. We must help. There are those who are less fortunate than us.", score: 0},
 			{text: "Maybe, but I'm not taking initiative on this. Who knows what our crazy neighbor will do?", reply: "No. We need to take initiative.", score: 0.2},
 		],
 	},
@@ -256,8 +256,9 @@ function create_terminal() {
 		
 		$('.terminal-wrapper').scrollTop($('.terminal-wrapper').prop("scrollHeight"));
 	}, {
-		greetings: 	'[[bgu;#76FF03;]Welcome to S.O.S. - Communcation Storyline]\n' +
-					'Type "help" at anytime to show the help screen.\n' +
+		greetings: 	'[[bgu;#76FF03;]Welcome to S.O.S.]\n' +
+					'This is a game of decisions. Choose the best response if one exists.\n' +
+					'Type "start" to start the game and "help" at anytime to show the help screen.\n' +
 					'',
 		name: 'S.O.S.',
 		exit: false,
