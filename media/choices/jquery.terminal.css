@@ -22,8 +22,14 @@
     position: fixed;
 }
 
+#testspan {
+	display: block;
+	word-break:break-all;
+	visibility: hidden;
+}
+
 html {
-	font-size: 20px;
+	font-size: 17px;
 	background-color: black;
 }
 
@@ -62,6 +68,7 @@ body {
         -ms-animation: blink 1s infinite steps(1, start);
             animation: blink 1s infinite steps(1, start);
 }
+
 @keyframes blink {
   0%, 100% {
         background-color: #000;
@@ -121,9 +128,12 @@ body {
     /*padding-top: 3px;*/
     min-height: 1.3rem;
 }
+
 .terminal .terminal-output div span {
     display: inline-block;
 }
+*/
+
 .cmd span {
     float: left;
     /*display: inline-block; */
@@ -160,8 +170,5 @@ body {
     clear: both;
 }
 .terminal a {
-    color: #0F60FF;
-}
-.terminal a:hover {
-    color: red;
+    color: #76FF03;
 }
