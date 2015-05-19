@@ -264,6 +264,7 @@ function create_terminal() {
 		exit: false,
 		clear: false,
 		onBlur: function() { return false; },
+		onInit: function(term) { term.resize(); },
 		keydown: function() { $('.terminal-wrapper').scrollTop($('.terminal-wrapper').prop("scrollHeight")); },
 		prompt: '> '});
 }
