@@ -66,7 +66,7 @@ var scenes = {
 		text: "Wow, we had so many sign ups from each block in L.A.! They left their name and block that they want to manage. With this amount, each block will have 3-7 people to lead them. We should contact them later. Talk about cooperation! Now, the only problem is how we will cooperate and keep contact with them.",
 		next: function() { return scenes.c8 },
 		choices: [
-			{text: "Pray and hope they have telepathy to connect with us and follow the right protocols.", reply: "There is not time to joke in this situation!", score: 0},
+			{text: "Pray and hope they have telepathy to connect with us and follow the right protocols.", reply: "There is no time to joke in this situation!", score: 0},
 			{text: "We can have an in person meeting soon. They should have enough control of their respective blocks", reply: "We need a way to maintain constant contact.", score: 0.3},
 			{text: "Talk with them in person and update them as much as possible in person. We should do this in a daily basis. If the internet works still, social media will definitely be useful in connecting with everyone.", score: 1},
 		],
