@@ -216,7 +216,6 @@ body {
 	display: flex;
 	// min-height: 100vh;
 	height: 100vh; /* This is the last draw IE. */
-	width: 100vw;
 	flex-direction: column;
 	overflow-y: scroll;
 }
@@ -232,7 +231,8 @@ main {
 	justify-content: center;
 	position: relative;
 	display: flex;
-	overflow: hidden; /* Again IE? When will you stop? */
+	min-height: 2px; /* WHY IE. WHY. */
+	// overflow: hidden; /* Again IE? When will you stop? */
 }
 
 ul.side-nav.fixed:hover {
