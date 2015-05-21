@@ -216,6 +216,7 @@ body {
 	display: flex;
 	// min-height: 100vh;
 	height: 100vh; /* This is the last draw IE. */
+	width: 100vw;
 	flex-direction: column;
 	overflow-y: scroll;
 }
@@ -228,6 +229,7 @@ header, footer {
 
 main {
 	flex: 1 0 auto;
+	justify-content: center;
 	position: relative;
 	display: flex;
 	overflow: hidden; /* Again IE? When will you stop? */
