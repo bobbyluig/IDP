@@ -28,6 +28,14 @@ a {
 		justify-content: center;
 	}
 	
+	.equalize {
+		display: flex;
+		
+		* {
+			flex: 1 1 auto;
+		}
+	}
+	
 	&.equalizer {
 		display: flex;
 		flex-wrap: wrap;
