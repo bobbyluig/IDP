@@ -181,14 +181,16 @@ footer a {
 /* Offset Wrappers */
 
 .footer-wrapper {
-	flex: 1;
+	flex: 1 0 auto;
 	background-color: rgba(55, 55, 55, 0.5);
 	padding-top: 20px;
+	width: 100%;
 }
 
 .main-wrapper {
-	flex: 1;
+	flex: 1 0 auto;
 	background-color: rgba(25, 25, 25, 0.97);
+	width: 100%;
 }
 
 
