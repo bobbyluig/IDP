@@ -137,9 +137,10 @@ footer a {
 /* Home Page */
 
 #z {
-	transition: color 3s ease-in-out, filter 3s ease-in-out;
+	transition: color 3s ease-in-out, filter 3s ease-in-out, -webkit-filter 3s ease-in-out;
 	color: #fff;
 	filter: blur(3px);
+	-webkit-filter: blur(3px);
 }
 
 .home-wrapper {
