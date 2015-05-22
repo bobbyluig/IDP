@@ -1,1 +1,1 @@
-$(document).ready(function(){$("html").removeClass("preload"),$(".button-collapse").sideNav(),$(".slider").slider({height:400,interval:5e3})});
+$(document).ready(function(){$("html").removeClass("preload"),$(".button-collapse").sideNav(),$(".slider").slider({height:500,interval:5e3})});
