@@ -4,15 +4,8 @@ from main.contact import contact as send_message
 from django.http import HttpResponse
 import json
 
-def home(request):
-	if 'upgrade' not in request.session:
-		upgrade = True
-		print('hi')
-		request.session['upgrade'] = False
-	else:
-		upgrade = False
-		
-	return render(request, 'home.html', {'footer': False, 'upgrade': upgrade})
+def home(request):		
+	return render(request, 'home.html', {'footer': False})
 
 @cache_page(60 * 15)	
 def exhibitions(request):
