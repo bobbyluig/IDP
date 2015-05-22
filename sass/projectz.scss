@@ -64,6 +64,10 @@ a {
 	display: block;
 }
 
+html {
+	word-wrap: break-word;
+}
+
 /* Preload */
 
 .preload * {
