@@ -24,7 +24,7 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^exhibitions/$', views.exhibitions, name='exhibitions'),
+    url(r'^exhibits/$', views.exhibits, name='exhibits'),
     url(r'^learn/$', views.learn, name='learn'),
     url(r'^visit/$', views.visit, name='visit'),
     url(r'^gallery/$', views.gallery, name='gallery'),

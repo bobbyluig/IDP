@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}Project Z - Exhibitions{% endblock %}
+{% block title %}Project Z - Exhibits{% endblock %}
+
+{% block css %}<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css" />{% endblock %}
 
 {% block main %}
 
@@ -37,11 +39,15 @@
 	<div class="main-wrapper">
 		<div class="section" id="index-banner">
 			<div class="container">
-				<h2 class="header center light-green-text text-accent-3">Exhibitions</h2>
+				<h2 class="header center light-green-text text-accent-3">Exhibits</h2>
 			</div>
 		</div>
 		<div class="container">
-			<div class="section scrollspy" id="infrastructure">
+			<div class="section gonzofiy" id="menu">
+				
+			</div>
+		
+			<div class="section gonzofiy" id="infrastructure">
 				<div class="row">
 					<div class="col center s12">
 						<div class="card-panel">
@@ -88,9 +94,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="divider"></div>
 			
-			<div class="section scrollspy" id="social">
+			<div class="section gonzofiy" id="social">
 				<div class="row">
 					<div class="col center s12">
 						<div class="card-panel">
@@ -146,9 +151,8 @@
 				</div>
 				
 			</div>
-			<div class="divider"></div>
 			
-			<div class="section scrollspy" id="medical">
+			<div class="section gonzofiy" id="medical">
 				<div class="row">
 					<div class="col center s12">
 						<div class="card-panel">
@@ -195,9 +199,8 @@
 				</div>
 				
 			</div>
-			<div class="divider"></div>
 			
-			<div class="section scrollspy" id="survival">
+			<div class="section gonzofiy" id="survival">
 				<div class="row">
 					<div class="col center s12">
 						<div class="card-panel">
@@ -250,5 +253,5 @@
 {% endblock %}
 
 {% block scripts %}
-<script type="text/javascript" src="{% static 'js/exhibitions.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/exhibits.js' %}"></script>
 {% endblock %}

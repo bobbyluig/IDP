@@ -8,8 +8,8 @@ def home(request):
 	return render(request, 'home.html', {'footer': False})
 
 @cache_page(60 * 15)	
-def exhibitions(request):
-	return render(request, 'exhibitions.html', {'footer': True})
+def exhibits(request):
+	return render(request, 'exhibits.html', {'footer': True})
 
 @cache_page(60 * 15)
 def learn(request):

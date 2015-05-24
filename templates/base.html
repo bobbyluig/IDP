@@ -30,6 +30,7 @@
 		<meta name="theme-color" content="#ffffff">
 		
 		<link type="text/css" rel="stylesheet" href="{% static 'css/projectz.css' %}" />
+		{% block css %}{% endblock %}
 	</head>
 
 	<body>
@@ -45,7 +46,7 @@
 					<object id="front-page-logo" type="image/svg+xml" data="{% static 'img/logo.svg' %}">Your browser does not support SVG</object>
 				</a></li>
 				<li><a href="/"><i class="mdi-action-account-balance left"></i>Home</a></li>
-				<li><a href="/exhibitions"><i class="mdi-action-description left"></i>Exhibitions</a></li>
+				<li><a href="/exhibits"><i class="mdi-action-description left"></i>Exhibits</a></li>
 				<li><a href="/learn"><i class="mdi-action-spellcheck left"></i>Learn</a></li>
 				<li><a href="/visit"><i class="mdi-action-explore left"></i>Visit</a></li>
 				<li><a href="/gallery"><i class="mdi-action-theaters left"></i>Gallery</a></li>
@@ -83,7 +84,7 @@
 		{% endif %}
 		
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 		{% block scripts %}{% endblock %}
 		<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-63026812-1', 'auto');ga('send', 'pageview');</script>
 	</body>

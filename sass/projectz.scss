@@ -18,6 +18,15 @@ a {
 	color: color("light-green", "accent-3");
 }
 
+/* Gonzofiy Exhibits */
+.gonzofiy {
+	display: none;
+	
+	&.active {
+		display: block;
+	}
+}
+
 /* True Flex Layout */
 
 .row.true-flex {
@@ -209,6 +218,7 @@ footer a {
 	flex: 1 0 auto;
 	background-color: rgba(25, 25, 25, 0.97);
 	width: 100%;
+	overflow-x: hidden;
 }
 
 
