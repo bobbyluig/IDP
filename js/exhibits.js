@@ -14,6 +14,7 @@ $(document).ready(function() {
 	
 		var settings = $.extend({
 			menu: '.table-of-contents',
+			defaultid: '#home',
 			animout: 'fadeOutLeft',
 			animin: 'fadeInLeft',
 		}, options);
@@ -45,10 +46,10 @@ $(document).ready(function() {
 		}
 		
 		$(window).bind('hashchange', function() {
-			var hash = '#' + window.location.hash.substr(1);
+			var hash = window.location.hash.substr(1).length > 0 ? '#' + window.location.hash.substr(1) : settings.defaultid;
 			var next = $('main').find(section, '.active');
 			
-			if (!active && hash.length > 1 && next.length && !next.hasClass('active')) {
+			if (!active && next.length && !next.hasClass('active')) {
 				active = true;
 				
 				menu.setmenu(hash);
