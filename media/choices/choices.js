@@ -4,6 +4,98 @@ var scenes = {
 		choices: [
 			{text: 'Resident (male)', exec: function() { character = 'Wife'; current = scenes.c1; } },
 			{text: 'Resident (female)', exec: function() { character = 'Husband'; current = scenes.c1; } },
+			{text: 'Distric Council Member (DCO)', exec: function() { character = 'DCO Member 2'; current = scenes.d1; } },
+		],
+	},
+	d1: {
+		exec: function(term) { fill_line(term); term.echo("[[b;#76FF03;]Department of Homeland Security:] A bioterrorist attack has just been launched to the city of L.A.! Quickly alert this for national headlines! Contact Los Angeles' District Council Office now!\n[[b;#76FF03;]DCO Member 1:] Department of Homeland Security has just reminded us about the attack. Everyone proceed with the recovery portion from the 5 core capabilities in order to successfully rebuild L.A's infrastructure!\n[[b;#76FF03;]DCO Member 2:] Sorry, I’m new at the office. What are the 5 core capabilities again?"); },
+		next: function() { return scenes.d2 },
+		choices: [
+			{text: "The 5 core capabilities are prevention, protection, mitigation, response, and recovery. Now, let’s focus on housing, operational coordination, health and social services, natural and cultural resources, and infrastructure system.", reply: "Got it.", score: 1},
+			{text: "I'm not too sure. However, you can find it in our database.", reply: "Okay. I'll look it up I guess.", score: 0.3},
+			{text: "You didn't get enough training did you? Horrific how they send people like you here nowadays.", reply: "I guess not ...", score: 0.1},
+		],
+	},
+	d2: {
+		text: "For operational coordination, what must we do?",
+		next: function() { return scenes.d3 },
+		choices: [
+			{text: "We must first establish and maintain a unified and coordinated operational structure and process that appropriately integrates all critical stakeholders and supports the execution of core capabilities. They are also in charge of supporting the capacity building and planning initiatives for communities and regions within the state.", score: 1},
+			{text: "We must first establish and maintain a unified operational structure and process that supports the Integrated Disease Surveillance and Response (IDSR) framework.", score: 0.8},
+			{text: "We must remain operational obviously.", reply: "When did you become so sarcastic?", score: 0.1},
+		],
+	},
+	d3: {
+		exec: function() { character = 'DCO Member 1' },
+		text: "How about housing?",
+		next: function() { return scenes.d4 },
+		choices: [
+			{text: "For housing, it’s necessary to implement housing solutions that effectively support the needs of a specific area in the community and contribute to its sustainability and resilience only for that specific area. The other areas can count on themselves.", score: 0.5},
+			{text: "For housing, simply tell everyone to find a home.", reply: "Your leadership is an utter disappointment", score: 0},
+			{text: "For housing, it’s necessary to implement housing solutions that effectively support the needs of the whole community and contribute to its sustainability and resilience. They support the development or redevelopment of housing including affordable and accessible housing in communities impacted by a disaster.", score: 1},
+		],
+	},
+	d4: {
+		text: "What shall do about health and social services?",
+		next: function() { return scenes.d5 },
+		choices: [
+			{text: "For health and social services, we’ll be working to restoring and improving H&SS networks to promote the resilience, independence, health, and well-being of the whole community. They generally assists in the restoration of health and social service needs of communities impacted by a disaster.", score: 1},
+			{text: "For health and social services, we’ll be working to promote the resilience, independence, health, and wellbeing of the specific area. It’s much easier to handle only a small portion of the community. The other areas will do fine.", score: 0.5},
+			{text: "We shall do all but nothing.", reply: "I'll be sure to have you ousted immediately.", score: 0},
+		],
+	},
+	d5: {
+		text: "What about natural and cultural resources?",
+		next: function() { return scenes.d6 },
+		choices: [
+			{text: "We’ll work to protect NCR and historic properties by going through the 5 core capabilities. They also assist in the protection and restoration of natural and cultural resources impacted by a disaster and subsequent recovery efforts, including environmentally sensitive areas and historically significant places.", score: 1},
+			{text: "We’ll work to protect historic properties by going through effective practices and IDSR guidelines and standards.", score: 0.5},
+			{text: "Protect my statue out front.", reply: "Haha, very funny.", score: 0},
+		],
+	},
+	d6: {
+		text: "Sorry to bother you again, but one last question. What we do for the infrastructure system?",
+		next: function() { return scenes.d7 },
+		choices: [
+			{text: "That’s alright, there’s a lot to remember for this job. Our goal is to stabilize critical infrastructure functions, minimize health and safety threats, and efficiently restore and revitalize systems and services to support a viable, resilient community.", score: 1},
+			{text: "That’s alright, there’s a lot to remember for this job. Our goal is to repair infrastructures, alert residents about the situation, and revitalize those critical damages in order to support the specific portion of that area.", score: 0.7},
+			{text: "GET TRAINING.", reply: "LEARN SOME MANNERS.", score: 0},
+		],
+	},
+	d7: {
+		text: "Are there other priorities that I need to know?",
+		next: function() { return scenes.d8 },
+		choices: [
+			{text: "Yes, a couple that you should keep in mind for now include: Restore the tax base and revenues to stable levels.  Restore schools, including Head Start schools, health services provided in schools and school lunch programs before the upcoming school year.  Reopen key industries and key sources of employment as soon as possible.  Implement mitigation principles and practices to enhance resiliency. Preserve and restore the natural and cultural resources of the community. Retain population and character of community.", score: 1},
+			{text: "Yes, a couple that you should keep in mind for now include: keeping the families, especially yours safe, implementing mitigation principles and practices to enhance resilience, and restore the natural and cultural resources of the community. Do not worry about schools or lunch programs. Only focus on the resource.", score: 0.6},
+			{text: "None that I know of.", score: 0},
+		],
+	},
+	d8: {
+		text: "What can voluntary, nonprofit organizations, or any agency helps us with?",
+		next: function() { return scenes.d9 },
+		choices: [
+			{text: "Organizations can help us by helping individual and community needs assessments, inclusive case management training and support, accessible construction (repair/rebuild) support and coordination, support the establishment of an Individual Needs Recovery Committee, debris removal from private property,  grant assistance, resource identification and fundraising support, crisis counseling and/or emotional and spiritual care, youth focused resilience programs, support for faith leaders in impacted areas, coordination of spontaneous volunteers, donations management support, inclusive information and referral support; and nutrition assistance.", score: 1},
+			{text: "The only thing they can help us is by only helping us restore construction and damaged areas of the city by rebuilding them.", score: 0.5},
+			{text: "We don't need help. We are independent and autonomous.", score: 0},
+		],
+	},
+	d9: {
+		text: "Besides the professional agencies and nonprofit organizations, what are specific organizations that can help with some of the areas for the recovery section that I mentioned earlier (housing, operational coordination, etc.)?",
+		next: function() { return scenes.d10 },
+		choices: [
+			{text: "The community planning and capacity building organizations include State Department of Community and Development, State Emergency Management Agency, etc. The whole list and their jobs are in our database.", score: 1},
+			{text: "There aren’t many organizations. We mostly depend on Red Cross and volunteering organizations to help us get by.", score: 0.2},
+			{text: "Like I said earlier, we don't need assistance.", reply: "Your horrible behavior will be reported.", score: 0},
+		],
+	},
+	d10: {
+		text: "Ah I see. I guess we have no time to waste. Time to start.",
+		next: function() { return scenes.end },
+		choices: [
+			{text: "Of course, we should be proceeding with it now! Get on with your roles everyone!", score: 1},
+			{text: "We have time to spare. Let’s get coffee.", score: 0.3},
+			{text: "Time to not.", score: 0},
 		],
 	},
 	c1: {
@@ -97,7 +189,7 @@ var scenes = {
 		choices: [
 			{text: "You know what, that sounds like a good idea. Attention everyone, I suggest that we set up charts to organize information. Ah, I'm such a genius for coming up with that.", reply: "Has anyone told you that you're really bad at leading?", score: 0},
 			{text: "You don't have to worry too much. Do what you feel is the best.", reply: "I guess we'll come back if we need any clarification.", score: 0.1},
-			{text: "Keep track of the buildings, organizations, radio clubs, neighborhood emergency supplies, disability service providers, hospitable buildings, carpentry services, plumbing services, crisis counselling, first aid and rescue teams, and businesses with emergency supplies. Keep an eye on any equipment that can be used for clearing any obstacle or evacuation resources like vehicles. List the contact information of these locations. Not only that, make a list of what block would most likely need what.", score: 1},
+			{text: "Keep track of the buildings, organizations, radio clubs, neighborhood emergency supplies, disability service providers, hospitable buildings, carpentry services, plumbing services, crisis counseling, first aid and rescue teams, and businesses with emergency supplies. Keep an eye on any equipment that can be used for clearing any obstacle or evacuation resources like vehicles. List the contact information of these locations. Not only that, make a list of what block would most likely need what.", score: 1},
 		],
 	},
 	c11: {
@@ -130,7 +222,7 @@ var scenes = {
 		],
 	},
 	end: {
-		exec: function(term) { fill_line(term); term.echo('You scored [[b;#76FF03;]' + uscore + '] out of [[b;#76FF03;]' + utotal + '].'); term.echo('Game has ended. Type "restart" to restart the game.'); fill_line(term); },
+		exec: function(term) { fill_line(term); term.echo('You scored [[b;#76FF03;]' + uscore.toFixed(2) + '] out of [[b;#76FF03;]' + utotal + '].'); term.echo('Game has ended. Type "restart" to restart the game.'); fill_line(term); },
 	},
 };
 
@@ -207,19 +299,19 @@ function start_scene(term) {
 function end_scene(choice, term) {
 	var change = current;
 	
-	if (current.hasOwnProperty('choices')) {
-		if (current.choices[choice].hasOwnProperty('score')) {
+	if (change.hasOwnProperty('choices')) {
+		if (change.choices[choice].hasOwnProperty('score')) {
 			utotal += 1;
-			uscore += current.choices[choice].score;
+			uscore += change.choices[choice].score;
 		}
-		if (current.choices[choice].hasOwnProperty('exec')) {
-			current.choices[choice].exec();
+		if (change.choices[choice].hasOwnProperty('exec')) {
+			change.choices[choice].exec();
 		}
-		if (current.choices[choice].hasOwnProperty('reply')) {
-			term.echo(char_prefix(current.choices[choice].reply));
+		if (change.choices[choice].hasOwnProperty('reply')) {
+			term.echo(char_prefix(change.choices[choice].reply));
 		}
 	}
-
+	
 	if (change === current && current.hasOwnProperty('next')) {
 		current = current.next();
 	}
@@ -251,6 +343,7 @@ function create_terminal() {
 				term.error('Invalid selection/command "' + command + '". Type "help" to show the help screen.');
 			}
 		} catch (e) {
+			console.log(e);
 			term.error('Fatal Error. Please refresh the page.');
 		}
 		
