@@ -2,6 +2,13 @@ $(document).ready(function() {
 	$('.button-collapse').sideNav();
 	$('html').removeClass('preload');
 	$('.gonzofiy').gonzofiy();
+	
+	$('div.modal-trigger').click(function() {
+		if ($($(this).data('modal')).length) {
+			$($(this).data('modal')).openModal();
+		}
+	});
+	
 });
 
 (function($) {
@@ -46,9 +53,9 @@ $(document).ready(function() {
 		}
 		
 		$(window).bind('hashchange', function() {
-			var hash = window.location.hash.substr(1).length > 0 ? '#' + window.location.hash.substr(1) : settings.defaultid;
+			var hash = $('#' + window.location.hash.substr(1)).length ? '#' + window.location.hash.substr(1) : settings.defaultid;
 			var next = $('main').find(section, '.active');
-			
+
 			if (!active && next.length && !next.hasClass('active')) {
 				active = true;
 				
