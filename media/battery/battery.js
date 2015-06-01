@@ -14,6 +14,18 @@ function discharge(H, C, I, k) {
 }
 
 var battery_data = {
+	'e-e93': {
+		'name': 'Energizer E93 (C-Alkaline)',
+		'H': 20,
+		'C': 8500,
+		'k': 1.25,
+	},
+	'e-e95': {
+		'name': 'Energizer E95 (D-Alkaline)',
+		'H': 20,
+		'C': 21000,
+		'k': 1.23,
+	},
 	'e-l92': {
 		'name': 'Energizer L92 Ultimate Lithium (AAA)',
 		'H': 20,
